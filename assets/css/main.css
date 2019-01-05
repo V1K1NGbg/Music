@@ -4399,3 +4399,6 @@ iframe.song {
   border: solid 5px #51baa4 !important;
     border-radius: 10px !important; 
 }
+.image.big img {
+  width: 100%
+}
