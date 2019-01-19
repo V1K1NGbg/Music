@@ -26,9 +26,15 @@
 
 
   <body class="landing">
+			<audio id="player" src="v.mp3"></audio>
+		<script src="https://sdk.scdn.co/spotify-player.js"></script>
     <header id="header" class="alt">
-      <h1><a href="index.html">Music</a></h1>
-      <a href="#nav">Genres</a>
+      <h1><a onclick="if(player.duration > 0 && !player.paused){document.getElementById('player').pause()}else{document.getElementById('player').play()}">Music</a></h1>
+			<script>
+				var myEmbed = document.getElementById("player_two");
+				var myVideo = document.getElementById("player");
+			}</script>
+			<a href="#nav">Genres</a>
     </header>
 
 
@@ -73,7 +79,7 @@
             </p>
             <ul class="actions">
 							<li><a href="https://en.wikipedia.org/wiki/Pop_music" class="button alt">More</a></li>
-							<li><iframe src="https://open.spotify.com/embed/track/4lLtanYk6tkMvooU0tWzG8" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+							<li><iframe src="https://open.spotify.com/embed/track/4lLtanYk6tkMvooU0tWzG8" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
             </ul>
           </div>
         </article>
@@ -86,7 +92,7 @@
             </p>
             <ul class="actions">
 							<li><a href="https://en.wikipedia.org/wiki/Rock_music" class="button alt">More</a></li>
-							<li><iframe src="https://open.spotify.com/embed/track/7o2CTH4ctstm8TNelqjb51" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+							<li><iframe src="https://open.spotify.com/embed/track/7o2CTH4ctstm8TNelqjb51" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
             </ul>
           </div>
         </article>
@@ -99,7 +105,7 @@
             </p>
             <ul class="actions">
 							<li><a href="https://en.wikipedia.org/wiki/Classical_music" class="button alt">More</a></li>
-							<li><iframe src="https://open.spotify.com/embed/track/7xfSCgVOkQJhVxnqzepATH" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+							<li><iframe src="https://open.spotify.com/embed/track/7xfSCgVOkQJhVxnqzepATH" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
             </ul>
           </div>
         </article>
@@ -112,7 +118,7 @@
             </p>
             <ul class="actions">
 							<li><a href="https://en.wikipedia.org/wiki/Jazz" class="button alt">More</a></li>
-							<li><iframe src="https://open.spotify.com/embed/track/6OA4tIxrEYbIZccLBt6ywS" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+							<li><iframe src="https://open.spotify.com/embed/track/6OA4tIxrEYbIZccLBt6ywS" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
             </ul>
           </div>
 		</article>
@@ -125,7 +131,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/K-pop" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/7b8YOVV5quZcSKEijDgyWB" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/7b8YOVV5quZcSKEijDgyWB" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -138,7 +144,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/Punk_rock" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/2mHchPRtQWet3iIS3jANr1" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/2mHchPRtQWet3iIS3jANr1" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -151,7 +157,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/Heavy_metal_music" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/5ohfpKB5tt275f4Y4lQ9F7" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/5ohfpKB5tt275f4Y4lQ9F7" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -164,7 +170,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/Dubstep" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/6VRhkROS2SZHGlp0pxndbJ" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/6VRhkROS2SZHGlp0pxndbJ" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -177,7 +183,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/House_music" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/0DiWol3AO6WpXZgp0goxAV" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/0DiWol3AO6WpXZgp0goxAV" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -190,7 +196,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/Electronic_music" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/4RXpgGM7A4Hg7cFBoH5KyF" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/4RXpgGM7A4Hg7cFBoH5KyF" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -203,7 +209,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/Reggae" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/423hwXFgoN8RYmqLoLuVvY" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/423hwXFgoN8RYmqLoLuVvY" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -216,7 +222,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/Rapping" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/5Z01UMMf7V1o0MzF86s6WJ" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/5Z01UMMf7V1o0MzF86s6WJ" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -229,7 +235,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/Disco" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/0G3fbPbE1vGeABDEZF0jeG" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/0G3fbPbE1vGeABDEZF0jeG" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
@@ -242,7 +248,7 @@
 				  </p>
 				  <ul class="actions">
 					<li><a href="https://en.wikipedia.org/wiki/Latin_music" class="button alt">More</a></li>
-					<li><iframe src="https://open.spotify.com/embed/track/7CUYHcu0RnbOnMz4RuN07w" class="song" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
+					<li><iframe src="https://open.spotify.com/embed/track/7CUYHcu0RnbOnMz4RuN07w" class="song" id="player_two" width="80" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></li>
 				  </ul>
 				</div>
 		</article>
