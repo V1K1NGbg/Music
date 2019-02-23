@@ -2,14 +2,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700");
 
-/*
-	Retrospect by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
-
-/* Reset */
-
 html,
 body,
 div,
@@ -95,8 +87,9 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font: inherit; 
   vertical-align: baseline;
+  cursor: url('../../images/music-note.png'), auto;
 }
 
 article,
@@ -111,6 +104,10 @@ menu,
 nav,
 section {
   display: block;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -3508,7 +3505,7 @@ button.alt:active,
   background-color: #1e2832;
   color: rgba(255, 255, 255, 0.75);
   background-attachment: fixed;
-  background-image: url("images/overlay.png"), url("../../images/pic11.jpg");
+  background-image: url("images/overlay.png"), url("../../images/banner.jpg");
   background-size: cover;
 }
 
@@ -3869,6 +3866,7 @@ body.landing {
   font-size: 1.25em;
   padding: 1em 2em;
   position: absolute;
+  z-index: 10000;
 }
 
 #header.alt > h1 {
@@ -3997,7 +3995,6 @@ body.landing {
   right: 0;
   text-align: right;
   top: 0;
-  vertical-align: middle;
   width: 7em;
 }
 
@@ -4392,13 +4389,54 @@ body.landing {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
 iframe.song {
   border: solid 5px #51baa4 !important;
     border-radius: 10px !important; 
 }
 .image.big img {
   width: 100%
+}
+#header.alt > h1 > a > div {
+  padding: 20px;
+}
+#return-to-top {
+  position: fixed;
+  z-index: 10003;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
 }
