@@ -89,7 +89,7 @@ video {
   font-size: 100%;
   font: inherit; 
   vertical-align: baseline;
-  cursor: url('../../images/music-note.png'), auto;
+  cursor: url('../../images/music-note.cur'), auto !important;
 }
 
 article,
