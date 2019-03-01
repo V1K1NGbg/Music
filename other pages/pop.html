@@ -9,9 +9,11 @@
   </head>
   <body class="landing">
     <header id="header">
-        <script>var W=window</script>
-      <h1><a onclick="W.close();"><i class="icon fas fa-arrow-left"></i> Back</a
-        >
+      <script>
+        var W = window;
+      </script>
+      <h1>
+        <a onclick="W.close();"><i class="icon fas fa-arrow-left"></i> Back</a>
       </h1>
     </header>
     <section id="one" class="wrapper style1">
@@ -47,34 +49,210 @@
         </article>
       </div>
     </section>
-      <section id="example" class="wrapper style3 special">
-        <div class="inner">
-          <header id="header" class="alt">
-            <h1><a><div>Examples</div></a></h1>
-          </header>
-          <header class="major narrow	">
-            <iframe
-              src="https://open.spotify.com/embed/user/digster.fm/playlist/7JXJKP3xMvIMbEBBGApTPQ"
-              width="330"
-              height="418"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-            ></iframe>
-          </header>
-        </div>
-      </section>
-      <section id="one" class="wrapper style1">
-        <div  id="quiz" class="inner">
-          <article class="feature right">
-              <span class="image big"><img src="../images/comingsoon.jpg" alt=""/></span>
-              <div class="content">
-                <p>
-                    <h1><font size="10">Coming soon</font></h1>
-                </p>
-              </div>
-          </article>
-        </div>
-      </section>
+    <section id="example" class="wrapper style3 special">
+      <div class="inner">
+        <header id="header" class="alt">
+          <h1>
+            <a><div>Examples</div></a>
+          </h1>
+        </header>
+        <header class="major narrow	">
+          <iframe
+            src="https://open.spotify.com/embed/user/digster.fm/playlist/7JXJKP3xMvIMbEBBGApTPQ"
+            width="330"
+            height="418"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </header>
+      </div>
+    </section>
+    <section id="one" class="wrapper style1">
+      <div id="quiz" class="inner">
+        <article class="feature left" style="padding: 50px;">
+          <div id="table_1">
+            <h2>Quiz</h2>
+            <h1>Guess the song</h1>
+            <hr />
+            <div id="center001">
+              Question: <text id="q001">0</text> Score:
+              <text id="score001">0</text> Attempt: <text id="attempts">2</text>
+            </div>
+            <p id="question01"></p>
+            <p id="msg01"></p>
+            
+            <div id="starter01">
+              <button onclick="begin001()" id="b001">Begin</button>
+            </div>
+            <p id="n001"></p>
+
+            <script>
+              var b = 0;
+              b++;
+              var c = 2;
+              c--;
+              var d = 0;
+              d++;
+
+              function begin001() {
+                document.getElementById("q001").innerHTML = d++;
+                document.getElementById("question01").innerHTML =
+                '<iframe src="https://open.spotify.com/embed/track/7fa9MBXhVfQ8P8Df9OEbD8" class="song" width="90" height="90" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>' +
+                  "<br />" +
+                  "<button onclick=ans001() id=q1>Girls Like You</button>" +
+                  "<button onclick=ans002() id=q2>thank u, next</button>" +
+                  "<button onclick=ans002() id=q3>Happier</button>";
+                document.getElementById("starter01").innerHTML = "";
+              }
+              function ans001() {
+                document.getElementById("score001").innerHTML = b++;
+                document.getElementById("question01").innerHTML = "Correct";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt1()>Next</button><br />";
+              }
+              function ans002() {
+                document.getElementById("question01").innerHTML = "Incorrect";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt1()>Next</button><br />";
+                document.getElementById("attempts").innerHTML = c--;
+                if (c < 0) {
+                  document.getElementById("question01").innerHTML = "";
+                  document.getElementById("msg01").innerHTML =
+                    "Sorry. You lost!";
+                  document.getElementById("n001").innerHTML = "";
+                }
+              }
+              function nxt1() {
+                document.getElementById("question01").innerHTML =
+                  '<iframe src="https://open.spotify.com/embed/track/5p7ujcrUXASCNwRaWNHR1C" class="song" width="90" height="90" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>' +
+                  "<br />" +
+                  "<button onclick=ans004() id=q4>thank u, next</button>" +
+                  "<button onclick=ans004() id=q5>Shallow</button>" +
+                  "<button onclick=ans003() id=q6>Without Me</button>";
+                document.getElementById("n001").innerHTML = "";
+                document.getElementById("q001").innerHTML = d++;
+              }
+              function ans003() {
+                document.getElementById("score001").innerHTML = b++;
+                document.getElementById("question01").innerHTML = "Correct";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt2()>Next</button><br />";
+              }
+              function ans004() {
+                document.getElementById("question01").innerHTML = "Incorrect";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt2()>Next</button><br />";
+                document.getElementById("attempts").innerHTML = c--;
+                if (c < 0) {
+                  document.getElementById("question01").innerHTML = "";
+                  document.getElementById("msg01").innerHTML =
+                    "Sorry. You lost!";
+                  document.getElementById("n001").innerHTML = "";
+                }
+              }
+              function nxt2() {
+                document.getElementById("question01").innerHTML =
+                  '<iframe src="https://open.spotify.com/embed/track/1rqqCSm0Qe4I9rUvWncaom" class="song" width="90" height="90" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>' +
+                  "<br />" +
+                  "<button onclick=ans005() id=q7>High Hopes</button>" +
+                  "<button onclick=ans006() id=q8>Havana</button>" +
+                  "<button onclick=ans006() id=q9>Happier</button>";
+                document.getElementById("n001").innerHTML = "";
+                document.getElementById("q001").innerHTML = d++;
+              }
+              function ans005() {
+                document.getElementById("score001").innerHTML = b++;
+                document.getElementById("question01").innerHTML = "Correct";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt3()>Next</button><br />";
+              }
+              function ans006() {
+                document.getElementById("question01").innerHTML = "Incorrect";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt3()>Next</button><br />";
+                document.getElementById("attempts").innerHTML = c--;
+                if (c < 0) {
+                  document.getElementById("question01").innerHTML = "";
+                  document.getElementById("msg01").innerHTML =
+                    "Sorry. You lost!";
+                  document.getElementById("n001").innerHTML = "";
+                }
+              }
+              function nxt3() {
+                document.getElementById("question01").innerHTML =
+                  '<iframe src="https://open.spotify.com/embed/track/09IStsImFySgyp0pIQdqAc" class="song" width="90" height="90" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>' +
+                  "<br />" +
+                  "<button onclick=ans007() id=q12>The Middle</button>" +
+                  "<button onclick=ans008() id=q11>Eastside</button>" +
+                  "<button onclick=ans008() id=q10>Havana</button>";
+                document.getElementById("n001").innerHTML = "";
+                document.getElementById("q001").innerHTML = d++;
+              }
+              function ans007() {
+                document.getElementById("score001").innerHTML = b++;
+                document.getElementById("question01").innerHTML = "Correct";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt4()>Next</button><br />";
+              }
+              function ans008() {
+                document.getElementById("question01").innerHTML = "Incorrect";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt4()>Next</button><br />";
+                document.getElementById("attempts").innerHTML = c--;
+                if (c < 0) {
+                  document.getElementById("question01").innerHTML = "";
+                  document.getElementById("msg01").innerHTML =
+                    "Sorry. You lost!";
+                  document.getElementById("n001").innerHTML = "";
+                }
+              }
+              function nxt4() {
+                document.getElementById("question01").innerHTML =
+                  '<iframe src="https://open.spotify.com/embed/track/7BKLCZ1jbUBVqRi2FVlTVw" class="song" width="90" height="90" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>' +
+                  "<br />" +
+                  "<button onclick=ans0010() id=q13>Shallow</button>" +
+                  "<button onclick=ans009() id=q15>Closer</button>" +
+                  "<button onclick=ans0010() id=q14>Bad Romance</button>";
+                document.getElementById("n001").innerHTML = "";
+                document.getElementById("q001").innerHTML = d++;
+              }
+              function ans009() {
+                document.getElementById("score001").innerHTML = b++;
+                document.getElementById("question01").innerHTML = "Correct";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt5()>Next</button><br />";
+              }
+              function ans0010() {
+                document.getElementById("question01").innerHTML = "Incorrect";
+                document.getElementById("starter01").innerHTML = "";
+                document.getElementById("n001").innerHTML =
+                  "<button onclick=nxt5()>Next</button><br />";
+                document.getElementById("attempts").innerHTML = c--;
+                if (c < 0) {
+                  document.getElementById("question01").innerHTML = "";
+                  document.getElementById("msg01").innerHTML =
+                    "Sorry. You lost!";
+                  document.getElementById("n001").innerHTML = "";
+                }
+              }
+              function nxt5() {
+                document.getElementById("msg01").innerHTML = "End of Quiz.";
+                document.getElementById("n001").innerHTML = "Congratulations !!!";
+              }
+            </script>
+          </div>
+        </article>
+      </div>
+    </section>
   </body>
 </html>
