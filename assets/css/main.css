@@ -22,6 +22,9 @@ a,
 abbr,
 acronym,
 address,
+button,
+iframe,
+svg,
 big,
 cite,
 code,
@@ -4439,4 +4442,26 @@ iframe.song {
 #return-to-top:hover i {
   color: #fff;
   top: 5px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to top right, darken(rgb(0, 238, 255), 10%) 0%, rgb(0, 238, 255) 100%);
+}
+#quiz1 {
+  width: 560px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 3px;
+}
+.center{
+  top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+#quiz_result{
+  margin: 2rem 2rem 0 2rem;
 }
