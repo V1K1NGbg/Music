@@ -25,12 +25,18 @@ $(document).ready(function() {
     $("#quiz_result").show();
     render();
 
-    quiz.click(e => {
-      var answer = e.target.id[1];
-      if (answer != "u" && answer == questions[questionNumber].correct) {
+    quiz.click(check => {
+      var answer = check.target.id[1];
+      if (answer == questions[questionNumber].correct) {
         score += 200;
       } else {
-        atempts = atempts - 1;
+        if (answer !='u') {
+          atempts = atempts - 1;  
+        }
+        else{
+          check();
+        }
+        
       }
 
       questionNumber++;
